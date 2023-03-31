@@ -19,6 +19,11 @@ body {
 
 }
 
+.iconHead{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
 #header {
     padding: 10px 0;
     background: #131212;
@@ -263,7 +268,93 @@ padding: 0 0 50px 0;
 .footer{
     padding: 50px 0;
 }
+
+
+.menu-btn {
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+}
+
+.menu-btn .bar {
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .bar:nth-of-type(2) {
+    top: calc(50% - 9px);
+}
+.menu-btn .bar:nth-of-type(3) {
+    top: calc(50% + 9px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active .bar:nth-of-type(1) {
+    display: none;
+}
+.menu-btn.active .bar:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active .bar:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+/* Меню, которое будет появляться */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background: rgba(61, 53, 53, 0.56);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+    border: 1px solid rgba(61, 53, 53, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+}
+.nav__list{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.nav__link{
+    color: white;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.nav.active {
+    transform: translateX(0);
+}
+
+.nav .nav__list_item {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
 /*!*<<<<<<<!*adaptive*!*!>>>>>>>>>>>*/
+
+
+
+
 @media (max-width: 992px) {
     .aboutBlock {
         flex-direction: column;
@@ -272,14 +363,11 @@ padding: 0 0 50px 0;
     .aboutImg {
         margin: 30px 50px;
     }
-}
-
-@media (max-width: 450px) {
-.adaptiveMenu{
-display: none}
+    .adaptiveMenu{
+        display: none;
+    }
 
 
-}
-
+    }
 
 
