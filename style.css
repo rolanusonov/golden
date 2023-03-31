@@ -20,15 +20,21 @@ body {
 }
 
 .iconHead{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     margin: 0 10px;
 }
+.imgIcon{
+    width: 90px;
+}
 #header {
+    width: 100%;
     padding: 10px 0;
     background: #131212;
     border-bottom: 1px solid rgba(193, 193, 193, 0.1);
-}
+    position: fixed;
+    z-index: 111;
+ }
 
 .logo {
     color: aliceblue;
@@ -36,6 +42,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
+    font-size: 40px;
+    margin-top: 30px;
 }
 
 .blockLogo {
@@ -54,12 +62,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 28px;
     color: #C1C1C1;
     text-decoration: none;
     margin: 0 20px;
 }
-
+.headerLogo{
+    width: 40px;
+}
 .iconWats {
     background: #131212;
 }
@@ -366,6 +376,10 @@ padding: 0 0 50px 0;
     .adaptiveMenu{
         display: none;
     }
+.iconHead{
+    width: 50px!important;
+    height: 50px;
+}
 
 
     }
