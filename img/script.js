@@ -29,11 +29,11 @@ let map;
 
 DG.then(function () {
     map = DG.map('map', {
-        center: [54.98, 82.89],
-        zoom: 13
+        center: [65.947871, 111.493909],
+        zoom: 43
     });
 
-    DG.marker([54.98, 82.89]).addTo(map).bindPopup('Вы кликнули по мне!');
+    DG.marker([65.947871, 111.493909]).addTo(map).bindPopup('Кафе-ресторан "Золотая подкова"');
 });
 
 
