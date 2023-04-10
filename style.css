@@ -383,7 +383,9 @@ padding: 0 0 50px 0;
     width: 50px!important;
     height: 50px;
 }
-
+    .sliderBlockImg img {
+        height: 800px!important;
+    }
 
     }
 
