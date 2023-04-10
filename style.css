@@ -386,6 +386,11 @@ padding: 0 0 50px 0;
     .sliderBlockImg img {
         height: 800px!important;
     }
+    .btnHero {
+        padding: 30px 60px;
+        font-size: 30px;
+
+    }
 
     }
 
